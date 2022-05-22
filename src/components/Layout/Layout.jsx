@@ -1,11 +1,14 @@
-import { HeaderBar } from 'components/HeaderBar/HeaderBar';
+import HeaderBar from '../HeaderBar';
 import { Outlet } from 'react-router-dom';
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <>
       <HeaderBar />
+      <hr />
       <Outlet />
     </>
   );
 };
+
+export default Layout;
