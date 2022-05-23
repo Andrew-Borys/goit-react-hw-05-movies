@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getTrending } from '../../services/API';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import Gallery from 'components/Gallery';
+import * as Scroll from 'react-scroll';
 
 const HomePage = () => {
   const [films, setFilms] = useState([]);
@@ -15,12 +16,14 @@ const HomePage = () => {
     setSearchParams({
       page: Number(currentPage) + 1,
     });
+    Scroll.animateScroll.scrollToTop();
   };
 
   const handleDecrement = e => {
     setSearchParams({
       page: Number(currentPage) - 1,
     });
+    Scroll.animateScroll.scrollToTop();
   };
 
   useEffect(() => {
