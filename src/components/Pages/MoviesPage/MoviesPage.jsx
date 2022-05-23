@@ -5,6 +5,7 @@ import SearchForm from '../../SearchForm';
 import Gallery from 'components/Gallery';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
+import * as Scroll from 'react-scroll';
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
@@ -29,6 +30,7 @@ const MoviesPage = () => {
       query: searchQuery,
       page: Number(currentPage) + 1,
     });
+    Scroll.animateScroll.scrollToTop();
   };
 
   const handleDecrement = e => {
@@ -36,6 +38,7 @@ const MoviesPage = () => {
       query: searchQuery,
       page: Number(currentPage) - 1,
     });
+    Scroll.animateScroll.scrollToTop();
   };
 
   useEffect(() => {

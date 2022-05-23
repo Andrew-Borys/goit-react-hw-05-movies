@@ -46,7 +46,7 @@ const Cast = () => {
           ))}
         </CastList>
       ) : (
-        <h3>There no information about cast</h3>
+        <h3>There are no information about cast ;(</h3>
       )}
     </div>
   );

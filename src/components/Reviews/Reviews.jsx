@@ -39,7 +39,7 @@ const Reviews = () => {
           ))}
         </ul>
       ) : (
-        <h3>Oops... There are no reviews yet!</h3>
+        <h3>Oops... There are no reviews yet... ¯_(ツ) _/¯</h3>
       )}
     </div>
   );
