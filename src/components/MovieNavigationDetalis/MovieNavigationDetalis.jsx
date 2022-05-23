@@ -1,10 +1,17 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const MovieNavigationDetalis = () => {
+  const location = useLocation();
   return (
     <>
-      <NavLink to="cast">Casts</NavLink>
-      <NavLink style={{ marginLeft: '15px' }} to="reviews">
+      <NavLink to="cast" state={{ from: location?.state?.from }}>
+        Casts
+      </NavLink>
+      <NavLink
+        style={{ marginLeft: '15px' }}
+        to="reviews"
+        state={{ from: location?.state?.from }}
+      >
         Reviews
       </NavLink>
     </>
