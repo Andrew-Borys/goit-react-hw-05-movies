@@ -18,12 +18,6 @@ const NotFound = lazy(() =>
   import('./Pages/NotFoundPage' /*webpackChunkName: "NotFound"*/)
 );
 
-// import Layout from './Layout';
-// import HomePage from './Pages/HomePage';
-// import MoviesPage from './Pages/MoviesPage/MoviesPage';
-// import MovieDetailsPage from './Pages/MovieDetailsPage';
-// import NotFound from './Pages/NotFoundPage';
-
 export const App = () => {
   return (
     <>
