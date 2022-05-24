@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getSearchQuery } from '../../services/API';
-import SearchForm from '../../SearchForm';
+import SearchForm from '../../components/SearchForm';
 import Gallery from 'components/Gallery';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';

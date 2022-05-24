@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { getCasts } from '../services/API';
+import { getCasts } from '../../services/API';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { CastImg, CastItem, CastList, CastTitle } from './Cast.styled';
 

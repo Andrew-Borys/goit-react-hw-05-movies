@@ -1,4 +1,4 @@
-import { getReviews } from '../services/API';
+import { getReviews } from '../../services/API';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';

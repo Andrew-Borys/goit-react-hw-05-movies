@@ -2,20 +2,22 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import Container from './Container';
-import Cast from './Cast';
-import Reviews from './Reviews';
+// import Cast from './Cast';
+// import Reviews from './Reviews';
+const Cast = lazy(() => import('./Cast' /*webpackChunkName: "Cast"*/));
+const Reviews = lazy(() => import('./Reviews' /*webpackChunkName: "Reviews"*/));
 const Layout = lazy(() => import('./Layout' /*webpackChunkName: "Layout"*/));
 const HomePage = lazy(() =>
-  import('./Pages/HomePage' /*webpackChunkName: "HomePage"*/)
+  import('../Pages/HomePage' /*webpackChunkName: "HomePage"*/)
 );
 const MoviesPage = lazy(() =>
-  import('./Pages/MoviesPage' /*webpackChunkName: "MoviesPage"*/)
+  import('../Pages/MoviesPage' /*webpackChunkName: "MoviesPage"*/)
 );
 const MovieDetailsPage = lazy(() =>
-  import('./Pages/MovieDetailsPage' /*webpackChunkName: "MovieDetailsPage"*/)
+  import('../Pages/MovieDetailsPage' /*webpackChunkName: "MovieDetailsPage"*/)
 );
 const NotFound = lazy(() =>
-  import('./Pages/NotFoundPage' /*webpackChunkName: "NotFound"*/)
+  import('../Pages/NotFoundPage' /*webpackChunkName: "NotFound"*/)
 );
 
 export const App = () => {
