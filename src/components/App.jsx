@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
+// import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import Container from './Container';
 // import Cast from './Cast';
 // import Reviews from './Reviews';
@@ -24,19 +24,19 @@ export const App = () => {
   return (
     <>
       <Container>
-        <Suspense fallback={Loading.hourglass('Loading...')}>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="/movies" element={<MoviesPage />} />
-              <Route path="/movies/:movieId/*" element={<MovieDetailsPage />}>
-                <Route path="cast" element={<Cast />} />
-                <Route path="reviews" element={<Reviews />} />
-              </Route>
-              <Route path="*" element={<NotFound />} />
+        {/* <Suspense fallback={Loading.hourglass('Loading...')}> */}
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/movies" element={<MoviesPage />} />
+            <Route path="/movies/:movieId/*" element={<MovieDetailsPage />}>
+              <Route path="cast" element={<Cast />} />
+              <Route path="reviews" element={<Reviews />} />
             </Route>
-          </Routes>
-        </Suspense>
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+        {/* </Suspense> */}
       </Container>
     </>
   );

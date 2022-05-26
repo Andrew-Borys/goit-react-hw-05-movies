@@ -10,7 +10,7 @@ const Reviews = () => {
   const { movieId } = useParams();
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  console.log('Revievs:', useLocation());
+  // console.log('Revievs:', useLocation());
 
   useEffect(() => {
     setIsLoading(true);
